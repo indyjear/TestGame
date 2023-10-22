@@ -1,1 +1,55 @@
-eqwqweqqdsa
+
+			       note ที่รวมสิ่งที่ผมเปลี่ยนภายในไป
+ 1. WinDesktopIcon(
+            onPressed: (c) {
+              launchUrl(readmePage);
+            },
+            child: Image.asset(
+              "assets/minesweeper/note.png", =======>>>>>>  เพิ่มไอค้อนขึ้นมาหนึ่งอันเอาไว้บันทึกการเปลี่ยนแปลง
+              fit: BoxFit.contain,
+            ),
+            text: "note",
+
+
+
+ 2. CustomThemeData customThemeData = CustomThemeData(
+  	primaryColor: primaryColor,
+  	secondaryColor: secondaryColor,
+  	windowTitleColor: Color.fromARGB(255, 1, 160, 81),  =======>>>>>> เพิ่มสีเป็นสีเขียว
+  	fillColor: Color.fromARGB(255, 125, 243, 88),
+  	fillColorDark: Color.fromARGB(244, 8, 151, 27),
+
+  
+
+  3. class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+
+    precacheImage(
+        const AssetImage("assets/minesweeper/emoji/smile2.png"), context);
+    precacheImage(
+        const AssetImage("assets/minesweeper/emoji/panic2.png"), context);
+    precacheImage(
+        const AssetImage("assets/minesweeper/emoji/won2.png"), context);  ===>>> เปลี่ยนหน้า emoji
+    precacheImage(
+        const AssetImage("assets/minesweeper/emoji/lost2.png"), context);
+    precacheImage(
+        const AssetImage("assets/minesweeper/emoji/what2.png"), context);
+  }
+
+ 4.return Stack(
+            children: [
+              Positioned(
+                  child: Image(
+                image: AssetImage(
+                  "assets/win/1120.png", ====>>>>  ใส่ภาพพื้นหลัง
+                ),
+                width: 8000,
+                height: 8000,
+                fit: BoxFit.cover,
+              )),
+              widget.desktop,
+
+
+
